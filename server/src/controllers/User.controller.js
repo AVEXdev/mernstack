@@ -1,6 +1,6 @@
 import UserModel from '../models/User.model.js'
 
-const createUser = async (req.res) => {
+const createUser = async (req, res) => {
 	const user = new UserModel({
 		username: req.body.username,
 		password: req.body.password,

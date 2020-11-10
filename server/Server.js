@@ -6,6 +6,7 @@ import bodyParser from 'body-parser'
 import middlewares from './src/middlewares/Middlewares.js'
 import Config from './config/Config.js'
 import UserRoutes from './src/routes/User.routes.js'
+import UserModel from './src/models/User.model.js'
 
 dotenv.config()
 const app = express()
@@ -16,6 +17,11 @@ app.use(morgan('common'))
 
 app.get('/recipe', (req, res) => {
 	res.send('Pancakes!')
+})
+
+// test post rest api
+app.get('/user', (req, res) => {
+	res.send(UserModel)
 })
 
 UserRoutes.routes(app)

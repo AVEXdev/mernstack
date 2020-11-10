@@ -1,0 +1,11 @@
+GET http://localhost:3001/recipe
+
+###
+
+POST http://localhost:3001/user
+Content-Type: application/json
+
+{
+    "username": "avexdev",
+    "password": "mypw"
+}
